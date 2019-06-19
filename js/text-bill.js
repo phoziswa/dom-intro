@@ -12,3 +12,4 @@
 // * display the latest total on the screen
 
 //
+// var billTypeTextElement = document.querySelector(".billTypeText");
