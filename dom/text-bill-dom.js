@@ -9,22 +9,22 @@ var templateSource = document.querySelector(".billTemplate").innerHTML;
 var billTemplate = Handlebars.compile(templateSource);
 
 
-instance = TextBillFactory()
+var text = TextBillFactory()
 
-billData();
-function billData(){
-    instance.bills(billTypeTextElement.value);
-    var changingColor = instance.colors()
+billsData();
+function billsData(){
+    text.bills(billTypeTextElement.value);
+    var changingColor = text.colors()
     var handbars = billTemplate({
 
-        call: "R" + instance.getCalls(),
-        sms: "R" + instance.getSms(),
-        total: "R" + instance.getTotal(),
+        call: "R" + text.getCalls(),
+        sms: "R" + text.getSms(),
+        total: "R" + text.getTotal(),
         changingColor
     
     });
     billDataElem.innerHTML = handbars;
 }
 
-addToBillBtnElement.addEventListener('click', billData)
+addToBillBtnElement.addEventListener('click', billsData)
 
