@@ -13,45 +13,45 @@
 //link the function to a click event on the calculate button
 
 
-var billStringField = document.querySelector(".billString");
-var calculateBtn = document.querySelector(".calculateBtn");
-var billTotalElement = document.querySelector(".billTotal");
+// var billStringField = document.querySelector(".billString");
+// var calculateBtn = document.querySelector(".calculateBtn");
+// var billTotalElement = document.querySelector(".billTotal");
 
-// function calculateBtnClicked(){
+// // function calculateBtnClicked(){
  
-//     var billString = billStringField.value;
+// //     var billString = billStringField.value;
     
-//     var billItems = billString.split(",");
+// //     var billItems = billString.split(",");
     
-//     var billTotal = 0;
+// //     var billTotal = 0;
     
-//     for (var i=0;i<billItems.length;i++){
-//         var billItem = billItems[i].trim();
-//         if (billItem === "call"){
-//             billTotal += 2.75;
-//         }
-//         else if (billItem === "sms"){
-//             billTotal += 0.75;
-//         }
-//     }
+// //     for (var i=0;i<billItems.length;i++){
+// //         var billItem = billItems[i].trim();
+// //         if (billItem === "call"){
+// //             billTotal += 2.75;
+// //         }
+// //         else if (billItem === "sms"){
+// //             billTotal += 0.75;
+// //         }
+// //     }
     
-    // var roundedBillTotal = billTotal.toFixed(2);
+//     // var roundedBillTotal = billTotal.toFixed(2);
 
-    if (billTotal >= 30){
+//     if (billTotal >= 30){
         
-        billTotalElement.classList.add("danger");
-        billTotalElement.classList.remove("warning");
-    }
-    else if (billTotal >= 20){
-        billTotalElement.classList.add("warning");
-        billTotalElement.classList.remove("danger");
-    }
-    else{
-        billTotalElement.classList.remove("warning");
-        billTotalElement.classList.remove("danger");
-    }
+//         billTotalElement.classList.add("danger");
+//         billTotalElement.classList.remove("warning");
+//     }
+//     else if (billTotal >= 20){
+//         billTotalElement.classList.add("warning");
+//         billTotalElement.classList.remove("danger");
+//     }
+//     else{
+//         billTotalElement.classList.remove("warning");
+//         billTotalElement.classList.remove("danger");
+//     }
 
-    billTotalElement.innerHTML = roundedBillTotal;
-}
+//     billTotalElement.innerHTML = roundedBillTotal;
 
-calculateBtn.addEventListener('click', calculateBtnClicked);
+
+// calculateBtn.addEventListener('click', calculateBtnClicked);

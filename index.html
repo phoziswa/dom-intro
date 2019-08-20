@@ -5,6 +5,23 @@
     <title></title>
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/x-template" class="billTemplate">
+      <tr>
+        <td>Call total</td>
+        <td>{{call}}</td>
+      </tr>
+      <tr>
+      <td>SMS total</td>
+        <td>{{sms}}</td>
+      </tr>
+        <tr>
+        <td>Total</td>
+        <td class="{{changingColor}}">{{total}}</td>
+    </tr>
+    
+    </script>
   </head>
   <body>
     <div class="container">
@@ -91,21 +108,11 @@
               <button class="button-primary addToBillBtn" type="button" name="button" >Add</button>
           </div>
             <div class="six columns">
-              <h5>Totals</h5>
+
               <table>
-                <tr>
-                  <td>Call total</td>
-                  <td>R<span class="callTotalOne">0.00</span></td>
-                </tr>
-                <tr>
-                  <td>SMS total</td>
-                  <td>R<span class="smsTotalOne">0.00</span></td>
-                </tr>
-                <tr>
-                  <td>Total</td>
-                  <td class="red">R<span class="totalOne">0.00</span></td>
-                </tr>
-              </table>
+              <tbody  class="billData">
+              </tbody>
+          </table>
             </div>
           </div>
         </div>
@@ -149,18 +156,8 @@
             <div class="six columns">
                   <h5>Totals</h5>
                   <table>
-                    <tr>
-                      <td>Call total</td>
-                      <td>R<span class="callTotalTwo">0.00</span></td>
-                    </tr>
-                    <tr>
-                      <td>SMS total</td>
-                      <td>R<span class="smsTotalTwo">0.00</span></td>
-                    </tr>
-                    <tr >
-                      <td>Total</td>
-                      <td class="orange" >R<span class="totalTwo">0.00</span></td>
-                    </tr>
+                    <tbody  class="radioBillData">
+                    </tbody>
                   </table>
             </div>
           </div>
@@ -233,7 +230,10 @@
     <script src="dom/calculate-bill-dom.js" charset="utf-8"></script>
 
     <script src="js/text-bill.js" charset="utf-8"></script>
+    <script src="dom/text-bill-dom.js" charset="utf-8"></script>
+
     <script src="js/radio-bill.js" charset="utf-8"></script>
+    <script src="dom/radio-bill-dom.js" charset="utf-8"></script>
 
     <script src="js/settings-bill.js" charset="utf-8"></script>
     <script src="dom/settings-bill-dom.js" charset="utf-8"></script>
