@@ -9,7 +9,7 @@ var templateSource = document.querySelector(".billTemplate").innerHTML;
 var billTemplate = Handlebars.compile(templateSource);
 
 
-var text = TextBillFactory()
+let text = TextBillFactory()
 
 billsData();
 function billsData(){
